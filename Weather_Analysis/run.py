@@ -7,6 +7,6 @@ if __name__ == "__main__":
     # models.manager.run()
 
     scheduler = BackgroundScheduler()
-    scheduler.add_job(controller.get_current_weather, 'interval', minutes=60)
+    scheduler.add_job(controller.get_current_weather, 'interval', seconds=20)
     scheduler.start()
     app.run(debug=True)
